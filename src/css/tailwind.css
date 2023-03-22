@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply overflow-hidden rounded-2xl min-w-[280px] flex flex-col shadow-2xl;
+  }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi Proyect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3c2e44e85f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+
+<body>
+    <header
+        class="w-full p-5 shadow-md sticky flex flex-row justify-between text-cyan-900 font-montserrat font-semibold">
+        <a href="#">Platzi Travel</a>
+
+        <nav>
+            <ul class="flex flex-row space-x-4">
+                <li>
+                    <a href="#locations">Locations</a>
+                </li>
+                <li>
+                    <a href="#stays">Stays</a>
+                </li>
+                <li>
+                    <a href="#faqs">FAQs</a>
+                </li>
+                <li>
+                    <a href="#aboutUs">About Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex flex-row space-x-3">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </header>
+
+    <main class="overflow-x-hidden">
+        <section id="#home" class="py-56 px-16 w-full bg-no-repeat bg-center bg-cover h-[70vh]"
+            style="background-image: url('./img/sanFranciscoDesktop.jpg');">
+            <div>
+                <h1 class="font-montserrat text-4xl font-semibold">Find more locations like this</h1>
+                <button class="text-cyan-900 bg-white px-6 py-2 rounded-2xl font-semibold mt-6">
+                    Explore more
+                </button>
+            </div>
+        </section>
+
+        <section id="#recomendations" class="p-8">
+            <h2 class="text-cyan-900 text-4xl font-semibold">Our recomendations</h2>
+
+            <div class="flex flex-row space-x-8 mt-9 overflow-x-scroll">
+
+                <div class="card">
+                    <img src="./img/norway.jpg" alt="norway" class="w-full h-44 object-cover">
+                    <div class="bg-[#8FA206] p-6 flex-grow">
+                        <h3 class="text-white font-semibold text-2xl">Norway</h3>
+                        <p class="mt-2 text-white text-lg">Beautiful landscapes</p>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <img src="./img/new_york.jpg" alt="new-york" class="w-full h-44 object-cover">
+                    <div class="bg-white p-6 flex-grow">
+                        <h3 class="text-[#61AEC9] font-semibold text-2xl">New York</h3>
+                        <p class="mt-2 text-[#61AEC9] text-lg">Concrete jungle</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img/yosemite.jpg" alt="yosemite" class="w-full h-44 object-cover">
+                    <div class="bg-[#8FA206] p-6 flex-grow">
+                        <h3 class="text-white font-semibold text-2xl">Yosemite</h3>
+                        <p class="mt-2 text-white text-lg">A break from the world</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img/seattle.jpg" alt="seattle" class="w-full h-44 object-cover">
+                    <div class="bg-white p-6 flex-grow">
+                        <h3 class="text-[#61AEC9] font-semibold text-2xl">Seattle</h3>
+                        <p class="mt-2 text-[#61AEC9] text-lg">Rain city</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img/switzerland.jpg" alt="switzerland" class="w-full h-44 object-cover">
+                    <div class="bg-[#8FA206] p-6 flex-grow">
+                        <h3 class="text-white font-semibold text-2xl">Switzerland</h3>
+                        <p class="mt-2 text-white text-lg">A big city</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-10" id="trending">
+            <h2 class="text-cyan-900 text-4xl font-semibold mb-8">Trending stays</h2>
+
+            <div class="h-[40vh] p-8 w-full bg-no-repeat bg-center bg-cover rounded-2xl"
+                style="background-image: url('./img/chicago.jpg');">
+                <div>
+                    <h2 class="text-white font-bold text-3xl text-end">Chicago</h2>
+                    <p class="text-white font-medium text-xl text-end">2 rooms, bathroom and kitchen</p>
+                </div>
+            </div>
+
+            <div class="h-[70vh] w-full flex flex-row space-x-6 mt-6">
+                <div class="w-2/6 p-8 h-full rounded-2xl bg-no-repeat bg-center bg-cover"
+                    style="background-image: url('./img/LA.jpg');">
+                    <div class="w-3/4 ml-auto">
+                        <h2 class="text-white font-bold text-3xl text-end">Los Angeles</h2>
+                        <p class="text-white font-medium text-xl text-end">4 rooms, 3 bathroom, kitchen and private pool
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col space-y-6 w-4/6 h-full">
+                    <div class="p-8 h-1/2 rounded-2xl bg-no-repeat bg-center bg-cover"
+                        style="background-image: url('./img/miami.jpg');">
+                        <div class="w-3/4 ml-auto">
+                            <h2 class="text-white font-bold text-3xl text-end">Miami</h2>
+                            <p class="text-white font-medium text-xl text-end">3 rooms, 2 bathroom, kitchen and amazing
+                                sea view
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-8 h-1/2 rounded-2xl bg-no-repeat bg-center bg-cover"
+                        style="background-image: url('./img/bali.jpg');">
+                        <div class="w-3/4 ml-auto">
+                            <h2 class="text-white font-bold text-3xl text-end">Bali</h2>
+                            <p class="text-white font-medium text-xl text-end">2 rooms, 2 bathroom, kitchen and private
+                                pool
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faqs" class="p-8">
+            <h2 class="text-cyan-900 text-4xl font-semibold mb-8">FAQs</h2>
+
+            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-xl font-medium mb-5">
+                We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
+                MasterCard, American Express, Paypal and Binance.
+            </p>
+            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-xl font-medium mb-5">
+                We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
+                MasterCard, American Express, Paypal and Binance.
+            </p>
+            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-xl font-medium mb-5">
+                We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
+                MasterCard, American Express, Paypal and Binance.
+            </p>
+            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-xl font-medium mb-5">
+                We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
+                MasterCard, American Express, Paypal and Binance.
+            </p>
+        </section>
+    </main>
+
+    <footer class="p-8 bg-[#FCFBFB]">
+        <h2 class="text-cyan-900 text-3xl font-semibold mb-8">About us</h2>
+        <ul class="text-xl font-medium">
+            <li class="mb-3">
+                <a href="#">Investors</a>
+            </li>
+            <li class="mb-3">
+                <a href="#">Jobs</a>
+            </li>
+            <li class="mb-3">
+                <a href="#">Privacy policy</a>
+            </li>
+            <li class="mb-3">
+                <a href="#">Terms and conditions</a>
+            </li>
+            <li class="mb-3">
+                <a href="#">Platzi travel inc</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
