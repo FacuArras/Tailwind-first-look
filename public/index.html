@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -13,54 +13,64 @@
     <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 
-<body>
-    <header
-        class="w-full p-5 shadow-md sticky flex flex-row justify-between text-cyan-900 font-montserrat font-semibold">
-        <a href="#">Platzi Travel</a>
+<body class="font-montserrat">
 
-        <nav>
-            <ul class="flex flex-row space-x-4">
+    <main class="overflow-x-hidden dark:bg-gray-900">
+        <header
+            class="hidden md:flex px-3 py-4 font-bold justify-between align-bottom text-primary dark:text-white dark:font-semibold">
+            <a href="#home" class="text-xl">
+                Platzi Travel
+            </a>
+            <ul class="flex space-x-4">
                 <li>
-                    <a href="#locations">Locations</a>
+                    <a href="#recomendations">
+                        Locations
+                    </a>
                 </li>
                 <li>
-                    <a href="#stays">Stays</a>
+                    <a href="#trending">
+                        Trending
+                    </a>
                 </li>
                 <li>
-                    <a href="#faqs">FAQs</a>
+                    <a href="#faqs">
+                        FAQS
+                    </a>
                 </li>
                 <li>
-                    <a href="#aboutUs">About Us</a>
+                    <a href="#aboutUs">
+                        About Us
+                    </a>
                 </li>
             </ul>
-        </nav>
-
-        <div class="flex flex-row space-x-3">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-user"></i>
-        </div>
-    </header>
-
-    <main class="overflow-x-hidden">
-        <section id="#home" class="py-56 px-16 w-full bg-no-repeat bg-center bg-cover h-[70vh]"
-            style="background-image: url('./img/sanFranciscoDesktop.jpg');">
-            <div>
-                <h1 class="font-montserrat text-4xl font-semibold">Find more locations like this</h1>
-                <button class="text-cyan-900 bg-white px-6 py-2 rounded-2xl font-semibold mt-6">
-                    Explore more
-                </button>
+            <div class="flex space-x-4 text-xl cursor-pointer">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-moon" id="toggleDarkMode"></i>
+                <i class="fa-solid fa-user"></i>
             </div>
+        </header>
+        <section id="home" class="py-6 px-8 w-full bg-sanFrancisco bg-no-repeat bg-center bg-cover h-[600px]">
+            <div class="mt-36 w-full flex justify-center md:hidden">
+                <input class="w-10/12 py-3 px-4 shadow-xl rounded-2xl transition-all duration-100 focus:w-full"
+                    placeholder="San Francisco" type="search" name="homeSearch">
+            </div>
+            <p class="text-primary hidden md:block text-3xl font-extrabold mt-48">
+                Find more locations like this
+            </p>
+            <button
+                class="bg-white rounded-full shadow-xl block mx-auto mt-16 py-3 px-8 text-2xl font-bold text-primary hover:bg-primary hover:text-white md:mx-0">
+                Explore more
+            </button>
         </section>
 
-        <section id="#recomendations" class="p-8">
-            <h2 class="text-cyan-900 text-4xl font-semibold">Our recomendations</h2>
+        <section id="recomendations" class="px-6 py-10">
+            <h2 class="text-primary text-3xl font-semibold dark:text-white">Our recomendations</h2>
 
-            <div class="flex flex-row space-x-8 mt-9 overflow-x-scroll">
+            <div class="flex flex-row space-x-10 overflow-x-scroll pt-10">
 
                 <div class="card">
                     <img src="./img/norway.jpg" alt="norway" class="w-full h-44 object-cover">
-                    <div class="bg-[#8FA206] p-6 flex-grow">
+                    <div class="bg-[#8FA206] p-6 flex-grow dark:bg-gray-600">
                         <h3 class="text-white font-semibold text-2xl">Norway</h3>
                         <p class="mt-2 text-white text-lg">Beautiful landscapes</p>
                     </div>
@@ -69,15 +79,15 @@
 
                 <div class="card">
                     <img src="./img/new_york.jpg" alt="new-york" class="w-full h-44 object-cover">
-                    <div class="bg-white p-6 flex-grow">
-                        <h3 class="text-[#61AEC9] font-semibold text-2xl">New York</h3>
-                        <p class="mt-2 text-[#61AEC9] text-lg">Concrete jungle</p>
+                    <div class="bg-white p-6 flex-grow dark:bg-gray-700">
+                        <h3 class="text-[#61AEC9] font-semibold text-2xl dark:text-white">New York</h3>
+                        <p class="mt-2 text-[#61AEC9] text-lg dark:text-white">Concrete jungle</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="./img/yosemite.jpg" alt="yosemite" class="w-full h-44 object-cover">
-                    <div class="bg-[#8FA206] p-6 flex-grow">
+                    <div class="bg-[#8FA206] dark:bg-gray-600 p-6 flex-grow">
                         <h3 class="text-white font-semibold text-2xl">Yosemite</h3>
                         <p class="mt-2 text-white text-lg">A break from the world</p>
                     </div>
@@ -85,94 +95,115 @@
 
                 <div class="card">
                     <img src="./img/seattle.jpg" alt="seattle" class="w-full h-44 object-cover">
-                    <div class="bg-white p-6 flex-grow">
-                        <h3 class="text-[#61AEC9] font-semibold text-2xl">Seattle</h3>
-                        <p class="mt-2 text-[#61AEC9] text-lg">Rain city</p>
+                    <div class="bg-white dark:bg-gray-700 p-6 flex-grow">
+                        <h3 class="text-[#61AEC9] dark:text-white font-semibold text-2xl">Seattle</h3>
+                        <p class="mt-2 text-[#61AEC9] dark:text-white text-lg">Rain city</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="./img/switzerland.jpg" alt="switzerland" class="w-full h-44 object-cover">
-                    <div class="bg-[#8FA206] p-6 flex-grow">
+                    <div class="bg-[#8FA206] dark:bg-gray-600 p-6 flex-grow">
                         <h3 class="text-white font-semibold text-2xl">Switzerland</h3>
                         <p class="mt-2 text-white text-lg">A big city</p>
                     </div>
                 </div>
+
+                <div class="card">
+                    <img src="./img/norway.jpg" alt="norway" class="w-full h-44 object-cover">
+                    <div class="bg-white dark:bg-gray-700 p-6 flex-grow">
+                        <h3 class="text-[#61AEC9] dark:text-white font-semibold text-2xl">Norway</h3>
+                        <p class="mt-2 text-[#61AEC9] dark:text-white text-lg">Beautiful landscapes</p>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <img src="./img/new_york.jpg" alt="new-york" class="w-full h-44 object-cover">
+                    <div class="bg-[#8FA206] dark:bg-gray-600 p-6 flex-grow">
+                        <h3 class="text-white font-semibold text-2xl">New York</h3>
+                        <p class="mt-2 text-white text-lg">Concrete jungle</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="p-10" id="trending">
-            <h2 class="text-cyan-900 text-4xl font-semibold mb-8">Trending stays</h2>
+        <section id="trending" class="px-6 py-10">
+            <h2 class="text-primary text-3xl font-semibold mb-8 dark:text-white">Trending stays</h2>
 
-            <div class="h-[40vh] p-8 w-full bg-no-repeat bg-center bg-cover rounded-2xl"
+            <div class="h-96 p-8 w-full bg-no-repeat bg-center bg-cover rounded-2xl"
                 style="background-image: url('./img/chicago.jpg');">
                 <div>
-                    <h2 class="text-white font-bold text-3xl text-end">Chicago</h2>
-                    <p class="text-white font-medium text-xl text-end">2 rooms, bathroom and kitchen</p>
+                    <h2 class="text-white font-bold text-3xl text-start md:text-end">Chicago</h2>
+                    <p class="text-white font-medium text-xl text-start md:text-end">2 rooms, bathroom and kitchen</p>
                 </div>
             </div>
 
-            <div class="h-[70vh] w-full flex flex-row space-x-6 mt-6">
-                <div class="w-2/6 p-8 h-full rounded-2xl bg-no-repeat bg-center bg-cover"
+            <div class="md:flex md:space-x-5">
+
+                <div class="h-96 p-8 w-full md:w-1/2 md:h-[90vh] bg-no-repeat bg-center mt-8 bg-cover rounded-2xl"
                     style="background-image: url('./img/LA.jpg');">
-                    <div class="w-3/4 ml-auto">
-                        <h2 class="text-white font-bold text-3xl text-end">Los Angeles</h2>
-                        <p class="text-white font-medium text-xl text-end">4 rooms, 3 bathroom, kitchen and private pool
+                    <div>
+                        <h2 class="text-white font-bold text-3xl text-start md:text-end">Los Angeles</h2>
+                        <p class="text-white font-medium text-xl text-start md:text-end">4 rooms, 3 bathrooms, kitchen
+                            and
+                            private pool.
                         </p>
                     </div>
                 </div>
 
-                <div class="flex flex-col space-y-6 w-4/6 h-full">
-                    <div class="p-8 h-1/2 rounded-2xl bg-no-repeat bg-center bg-cover"
+                <div class="md:w-full">
+
+                    <div class="h-96 md:h-[44vh] p-8 w-full bg-no-repeat bg-center mt-8 bg-cover rounded-2xl"
                         style="background-image: url('./img/miami.jpg');">
-                        <div class="w-3/4 ml-auto">
-                            <h2 class="text-white font-bold text-3xl text-end">Miami</h2>
-                            <p class="text-white font-medium text-xl text-end">3 rooms, 2 bathroom, kitchen and amazing
-                                sea view
-                            </p>
+                        <div>
+                            <h2 class="text-white font-bold text-3xl text-start md:text-end">Chicago</h2>
+                            <p class="text-white font-medium text-xl text-start md:text-end">3 rooms, 2 bathrooms,
+                                kitchen
+                                and
+                                amazing
+                                sea view.</p>
                         </div>
                     </div>
-                    <div class="p-8 h-1/2 rounded-2xl bg-no-repeat bg-center bg-cover"
+
+                    <div class="h-96 md:h-[43vh] p-8 w-full bg-no-repeat bg-center mt-8 md:mt-5 bg-cover rounded-2xl"
                         style="background-image: url('./img/bali.jpg');">
-                        <div class="w-3/4 ml-auto">
-                            <h2 class="text-white font-bold text-3xl text-end">Bali</h2>
-                            <p class="text-white font-medium text-xl text-end">2 rooms, 2 bathroom, kitchen and private
-                                pool
-                            </p>
+                        <div>
+                            <h2 class="text-white font-bold text-3xl text-start md:text-end">Chicago</h2>
+                            <p class="text-white font-medium text-xl text-start md:text-end">2 rooms, 2 bathrooms,
+                                kitchen
+                                and
+                                private
+                                pool.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="faqs" class="p-8">
-            <h2 class="text-cyan-900 text-4xl font-semibold mb-8">FAQs</h2>
+        <section id="faqs" class="px-6 py-8">
+            <h2 class="text-primary text-3xl font-semibold mb-8 dark:text-white">FAQs</h2>
 
-            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
-            <p class="text-xl font-medium mb-5">
+            <h3 class="text-primary dark:text-white text-2xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-lg mb-5 dark:text-gray-400">
                 We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
                 MasterCard, American Express, Paypal and Binance.
             </p>
-            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
-            <p class="text-xl font-medium mb-5">
+            <h3 class="text-primary dark:text-white text-2xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-lg mb-5 dark:text-gray-400">
                 We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
                 MasterCard, American Express, Paypal and Binance.
             </p>
-            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
-            <p class="text-xl font-medium mb-5">
-                We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
-                MasterCard, American Express, Paypal and Binance.
-            </p>
-            <h3 class="text-cyan-900 text-3xl font-semibold mb-4">Payment Methods</h3>
-            <p class="text-xl font-medium mb-5">
+            <h3 class="text-primary dark:text-white text-2xl font-semibold mb-4">Payment Methods</h3>
+            <p class="text-lg mb-5 dark:text-gray-400">
                 We accept VISA, MasterCard, American Express, Paypal and Binance, We accept VISA,
                 MasterCard, American Express, Paypal and Binance.
             </p>
         </section>
-    </main>
 
-    <footer class="p-8 bg-[#FCFBFB]">
-        <h2 class="text-cyan-900 text-3xl font-semibold mb-8">About us</h2>
+    </main>
+    <footer id="aboutUs" class="px-6 py-8 bg-[#FCFBFB] dark:bg-gray-800 dark:text-white">
+        <h2 class="text-primary text-3xl font-semibold mb-6 dark:text-white">About us</h2>
         <ul class="text-xl font-medium">
             <li class="mb-3">
                 <a href="#">Investors</a>
@@ -191,6 +222,47 @@
             </li>
         </ul>
     </footer>
+
+    <div id="tabBar"
+        class="flex md:hidden justify-center items-center bg-white shadow-2xl py-3 fixed w-full bottom-0 left-0">
+        <ul class="flex space-x-6 text-2xl">
+            <li class="hover:text-primary">
+                <a href="#home">
+                    <i class="fa-solid fa-house-chimney"></i>
+                </a>
+            </li>
+            <li class="hover:text-primary">
+                <a href="#trending">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </a>
+            </li>
+            <li class="hover:text-primary">
+                <a href="#recomendations">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+            </li>
+            <li class="hover:text-primary">
+                <i class="fa-solid fa-moon" id="darkMode"></i>
+            </li>
+            <li class="hover:text-primary">
+                <i class="fa-solid fa-user"></i>
+            </li>
+        </ul>
+    </div>
 </body>
+
+<script>
+    const HTMLEl = document.querySelector("html");
+    const toggleEl = document.querySelector("#toggleDarkMode");
+    const toggle = document.querySelector("#darkMode");
+
+    toggle.addEventListener("click", () => {
+        HTMLEl.classList.toggle("dark");
+    });
+
+    toggleEl.addEventListener("click", () => {
+        HTMLEl.classList.toggle("dark");
+    });
+</script>
 
 </html>

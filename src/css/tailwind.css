@@ -4,6 +4,6 @@
 
 @layer components {
   .card {
-    @apply overflow-hidden rounded-2xl min-w-[280px] flex flex-col shadow-2xl;
+    @apply overflow-hidden cursor-pointer rounded-2xl min-w-[260px] flex flex-col shadow-xl transition-transform duration-300 hover:-translate-y-1;
   }
 }
